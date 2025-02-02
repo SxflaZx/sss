@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bantu Aku Belajar Math!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #ff5733;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .gif-container {
+            margin: 20px 0;
+        }
+        .button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no {
+            background-color: #FF4136;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bagi catatan Matematika 🤓</h1>
+        <div class="gif-container">
+            <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" alt="Funny GIF" width="300">
+        </div>
+        <button class="button yes" onclick="alert('Makasih Cantik! 🎉')">Ya</button>
+        <button class="button no" id="noButton">Tidak</button>
+    </div>
+
+    <script>
+        let noButton = document.getElementById("noButton");
+
+        function moveButton() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+
+        noButton.addEventListener("mouseover", moveButton);
+        noButton.addEventListener("touchstart", moveButton); // Agar bekerja di HP
+    </script>
+</body>
+</html>
